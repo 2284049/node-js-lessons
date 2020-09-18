@@ -38,6 +38,14 @@ const holidays = [
    "Columbus Day",
 ];
 
+// Here we have an array of multiple arrays with different data.
+// Holidays, what year they are starting, HR person who decided
+const newHolidaysFromHR = [
+   ["Veterans Day", 2020, "Megan"],
+   ["Thanksgiving", 2020, "Megan"],
+   ["Christmas Day", 2020, "Megan"],
+];
+
 const firstHolidayOfTheArr = holidays[0];
 console.log(
    `The first holiday of the array is ${firstHolidayOfTheArr} and the first letter of the name is ${firstLetter}. `
@@ -111,3 +119,91 @@ console.log(`Here's a list of our old holidays:\n `, holidays);
 console.log(`Here's a list of our new holidays:\n `, newHolidays);
 // we worded it like this to get the list presented like an array
 // the \n tells it to do a new line there
+
+console.log(`Here's a list of our new holidays:\n `, newHolidaysFromHR);
+
+// CONCATONATING - putting two things together
+const allHolidays = newHolidays.concat(newHolidaysFromHR);
+console.log(`Here's a list of all holidays:\n `, allHolidays);
+// This will give us all the arrays in a list together,
+// but they are still separated by brackets and have extra info we don't need
+// you can also do it this way:
+const allHolidays2 = [...newHolidays, ...newHolidaysFromHR];
+console.log(`Here's a list of all holidays:\n `, allHolidays2);
+
+// we need to FLAT the array - flat default is 1 level deep (first item of each grouped array)
+const allFlatHolidays = allHolidays.flat();
+console.log(`Here's a list of all flat holidays:\n `, allFlatHolidays);
+
+// a SET will return only unique things from an array (list)
+const allUniqueHolidays = [...new Set(allFlatHolidays)];
+console.log(`Here's a list of all unique holidays:\n `, allUniqueHolidays);
+
+// we are going to "slice" out the stuff we want to keep
+// in sections
+// and then concatonate it
+// SLICE INCLUDES THE START INDEX, BUT NOT THE END INDEX
+const firstHolidays = allUniqueHolidays.slice(0, 8);
+console.log(`Here are the first holidays:\n `, firstHolidays);
+const secondHolidays = allUniqueHolidays.slice(10);
+// the second group, we can just put 10 and it will go from index 10 to the end
+console.log(`Here are the second holidays:\n `, secondHolidays);
+// You can use INDEXOF instead
+const firstIndexOfHolidays = allUniqueHolidays.slice(
+   0,
+   allUniqueHolidays.indexOf(2020)
+);
+console.log(`Here are the first holidays:\n `, firstIndexOfHolidays);
+const secondIndexOfHolidays = allUniqueHolidays.slice(
+   allUniqueHolidays.indexOf("Thanksgiving")
+);
+console.log(`Here are the second holidays:\n `, secondIndexOfHolidays);
+
+// FINAL LIST USING CONCATINATE
+const allTrimmedHolidays = firstHolidays.concat(secondHolidays);
+console.log(
+   `At long last, here is the final list of holidays:\n`,
+   allTrimmedHolidays
+);
+// FINAL LIST USING SPREAD METHOD
+const allCleanedUpHolidays = [...firstHolidays, ...secondHolidays];
+console.log(
+   `At long last, here is the final list of holidays:\n`,
+   allCleanedUpHolidays
+);
+
+// combine 2 lists of fruit into one list
+// remove items that are not fruits
+
+const firstFruits = ["apple", "pear", "ball", "banana"];
+console.log(`Here's a list of the first fruits:\n`, firstFruits);
+const secondFruits = ["peach", "strawberry", "stick", "apple", "kiwi"];
+const allFruits = firstFruits.concat(secondFruits);
+console.log(`Entire list of fruits:\n`, allFruits);
+const allUniqueFruits = [...new Set(allFruits)];
+console.log(`Here's a list of all unique fruits:\n `, allUniqueFruits);
+
+const firstSliceOfFruits = allUniqueFruits.slice(
+   0,
+   allUniqueFruits.indexOf("ball")
+);
+console.log(`Here is the first slice of fruits:\n `, firstSliceOfFruits);
+const secondSliceOfFruits = allUniqueFruits.slice(
+   allUniqueFruits.indexOf("banana"),
+   allUniqueFruits.indexOf("stick")
+);
+console.log(`Here is the second slice of fruits:\n `, secondSliceOfFruits);
+const thirdSliceOfFruits = allUniqueFruits.slice(
+   allUniqueFruits.indexOf("kiwi")
+);
+console.log(`Here is the third slice of fruits:\n `, thirdSliceOfFruits);
+
+// FINAL LIST USING CONCATINATE
+const allCleanedUpFruits = firstSliceOfFruits.concat(
+   secondSliceOfFruits,
+   thirdSliceOfFruits
+);
+console.log(
+   `At long last, here is the final list of fruits:\n`,
+   allCleanedUpFruits
+);
