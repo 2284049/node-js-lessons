@@ -115,3 +115,26 @@ for (let i = 0; i < holidayValues.length; i++) {
    }
 }
 console.log(`Mike's holiday dates: `, mikesHolidayDates);
+
+// NESTING LOOPS - my own challenge / lesson
+// create a new array with every value doubled from the array with nested arrays
+// use this method if you have nested arrays and want to do something to every single value
+
+const startingArrayValues = [
+   [1, 2, 3],
+   [3, 5, 7],
+   [2, 4, 6],
+];
+let doubledArrayValues = [];
+for (let i = 0; i < startingArrayValues.length; i++) {
+   for (let j = 0; j < startingArrayValues[i].length; j++) {
+      // the code above is selecting every single value in the array, one at a time
+      // we are giving each value ${startingArray[i][j]} the variable of ${valueInArray}:
+      const valueInArray = startingArrayValues[i][j];
+      // we are now doubling every single value in the array by multiplying it by 2
+      doubledValue = 2 * valueInArray;
+      // we are putting all the doubled values together (concatenating them) in our new array:
+      doubledArrayValues = doubledArrayValues.concat(doubledValue);
+   }
+}
+console.log(doubledArrayValues); // this returns: [2, 4, 6,  6, 10, 14, 4, 8, 12]
