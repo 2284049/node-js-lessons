@@ -198,7 +198,6 @@ const thirdSliceOfFruits = allUniqueFruits.slice(
 );
 console.log(`Here is the third slice of fruits:\n `, thirdSliceOfFruits);
 
-// FINAL LIST USING CONCATINATE
 const allCleanedUpFruits = firstSliceOfFruits.concat(
    secondSliceOfFruits,
    thirdSliceOfFruits
@@ -207,3 +206,5 @@ console.log(
    `At long last, here is the final list of fruits:\n`,
    allCleanedUpFruits
 );
+
+// LOOPS - How to target a batch of stuff
