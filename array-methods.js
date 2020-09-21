@@ -131,7 +131,8 @@ console.log(`Here's a list of all holidays:\n `, allHolidays);
 const allHolidays2 = [...newHolidays, ...newHolidaysFromHR];
 console.log(`Here's a list of all holidays:\n `, allHolidays2);
 
-// we need to FLAT the array - flat default is 1 level deep (first item of each grouped array)
+// we need to FLAT the array
+// it will get rid of nested arrays
 const allFlatHolidays = allHolidays.flat();
 console.log(`Here's a list of all flat holidays:\n `, allFlatHolidays);
 

@@ -138,3 +138,5 @@ for (let i = 0; i < startingArrayValues.length; i++) {
    }
 }
 console.log(doubledArrayValues); // this returns: [2, 4, 6,  6, 10, 14, 4, 8, 12]
+
+// note: Mike likes to use i2 instead of j for the nested loop
