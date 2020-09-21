@@ -29,7 +29,7 @@ console.log(`Normalized email address: ${lowerCasedEmail}`);
 
 let birthday = "4/21/1981";
 
-const monthIndex = birthday.indexOf("4"); //looking for a string of "4"
+const monthIndex = birthday.indexOf("4"); //looking for the index of "4" string
 console.log(
    `The string "4" is found at the ${monthIndex} index of ${birthday}.`
 );
@@ -72,6 +72,7 @@ console.log(
 const indexOfDash = birthday.indexOf("-");
 console.log(`The dash in ${birthday} is found at the ${indexOfDash} index.`);
 // this will return -1 because there isn't a dash found in ${birthday}
+// the birthday only has slashes
 
 // we are telling it what to search for (a dash in this instance):
 const charToSearchFor = "-";
