@@ -209,3 +209,20 @@ console.log(
 );
 
 // LOOPS - How to target a batch of stuff
+
+// ONE WAY TO SEPARATE LOCAL PART OF EMAIL
+// USING DELIMITER & SLICE METHOD
+// const delimiter = "@";
+// const indexOfEmailAtDelimiter = trimmedAndLowerCasedEmail.indexOf(delimiter);
+// const localPartEmail = trimmedAndLowerCasedEmail.slice(0, indexOfEmailAtDelimiter);
+// console.log(
+//    `This is the user inputted local part of email: ${localPartEmail}`
+// );
+// const localPartEmailLength = localPartEmail.length;
+// console.log(`The lenght of the local part of the inputted email is: `, localPartEmailLength);
+
+// SECOND WAY TO SEPARATE LOCAL PART OF EMAIL
+// USING SPLIT METHOD
+
+const emailParts = email.split("@"); // ["mike", "gmail.com"]
+const localPartEmail = emailParts[0]; // "mike"
