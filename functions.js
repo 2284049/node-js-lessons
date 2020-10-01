@@ -18,6 +18,9 @@ console.log("Hello");
 // // const reversedString = toReverse("Hello");
 // // console.log(reversedString); return: H
 
+// You can't reverse strings, but you can reverse arrays.
+// Make it an array by splitting it, reverse it, and make it a string again.
+
 function toReverse(str) {
    if (str === "") {
       throw Error("String cannot be empty.");

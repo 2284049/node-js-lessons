@@ -1,7 +1,7 @@
 // REVERSING A STRING USING SPLIT
 // you can also use SPLIT to separate things into parts (parts of an email, parts of dates)
 // You can't reverse strings, but you can reverse arrays.
-// Make it an array, reverse it, and make it a string again.
+// Make it an array by splitting it, reverse it, and make it a string again.
 
 const email = "mike@gmail.com";
 // use the SPLIT method to make a string an array
