@@ -46,10 +46,56 @@ function mutation(arr) {
    const strOneChars = strOne.split("");
    for (let i = 0; i < strTwoChars.length; i++) {
       if (strOneChars.includes(strTwoChars[i]) === false) {
-         return false;
+         return false; // whatever I put as the if condition, it will stop the loop
+         // once that condition is met one time
       }
    }
    return true;
 }
 const answer = mutation(["round", "dnuor"]);
 console.log(answer);
+
+// FCC: Basic JavaScript: Accessing Object Properties with Dot Notation
+// There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+// Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+// Here is a sample of using dot notation (.) to read an object's property:
+// var myObj = {
+//   prop1: "val1",
+//   prop2: "val2"
+// };
+// var prop1val = myObj.prop1; // val1
+// var prop2val = myObj.prop2; // val2
+// Read in the property values of testObj using dot notation. Set the variable hatValue equal to the object's property hat and set the variable shirtValue equal to the object's property shirt.
+// Setup
+var testObj = {
+   hat: "ballcap",
+   shirt: "jersey",
+   shoes: "cleats",
+};
+
+// Only change code below this line
+
+var hatValue = testObj.hat; // Change this line
+var shirtValue = testObj.shirt; // Change this line
+
+// FCC: Basic JavaScript: Testing Objects for Properties
+// Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+
+// Example
+
+// var myObj = {
+//   top: "hat",
+//   bottom: "pants"
+// };
+// myObj.hasOwnProperty("top");    // true
+// myObj.hasOwnProperty("middle"); // false
+// Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
+function checkObj(obj, checkProp) {
+   // Only change code below this line
+   if (obj.hasOwnProperty(checkProp)) {
+      return obj[checkProp];
+   } else {
+      return "Not Found";
+   }
+   // Only change code above this line
+}

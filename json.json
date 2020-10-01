@@ -1,0 +1,25 @@
+{
+   "email": "mike@gmail.com",
+   "password": "skywalker",
+   "createdAt": 1600730742258,
+   "id": "007423",
+   "socialProfiles": [
+      {
+         "site": "facebook",
+         "username": "mikez",
+         "id": "00600782937",
+         "profilePic": "",
+         "image": {
+            "small": "small.jpg",
+            "medium": "medium.jpg",
+            "large": "large.jpg"
+         }
+      },
+      {
+         "site": "twitter",
+         "username": "mikezetlow",
+         "id": "a4b892cd3",
+         "thumbnail": ""
+      }
+   ]
+}
