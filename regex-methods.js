@@ -82,6 +82,24 @@ function titleCase2(str) {
 const capitalizedString = titleCase("I'm a little tea pot");
 console.log(`This is the second capitalized string: `, capitalizedString);
 
+// METHOD 3: split string into words, split words into chars,
+// map over each character to return char uppercase or lower case
+function titleCase(str) {
+   return str
+      .split(" ")
+      .map((word) => {
+         return word
+            .split("")
+            .map((char, i) => {
+               if (i === 0) return char.toUpperCase();
+               else return char.toLowerCase();
+            })
+            .join("");
+      })
+      .join(" ");
+}
+console.log(titleCase("I'm a little tea pot"));
+
 // /bugs?/; // the question mark means the s is optional
 // both "bug" and "bugs" would light up
 
